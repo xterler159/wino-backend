@@ -1,4 +1,4 @@
-import Koa, {Request, Response} from "koa";
+import Koa from "koa";
 import Router from "koa-router";
 
 import rootRoute from "./routes/rootRoute";
