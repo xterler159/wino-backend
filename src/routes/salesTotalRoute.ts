@@ -1,9 +1,12 @@
 import Router from "koa-router";
+import {getTotal} from "../controllers/SalesController";
 
 const router = new Router();
 
 router.get("/total-sales", async (ctx) => {
-    ctx.body = "TOTAL SALES PAGE";
+    const data = await getTotal();
+
+    ctx.body = data;
     return ctx.status = 200;
 });
 

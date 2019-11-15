@@ -8,17 +8,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const koa_router_1 = __importDefault(require("koa-router"));
-const SalesController_1 = require("../controllers/SalesController");
-const router = new koa_router_1.default();
-router.get("/total-sales", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield SalesController_1.getTotal();
-    ctx.body = data;
-    return ctx.status = 200;
-}));
-exports.default = router.routes();
-//# sourceMappingURL=salesTotalRoute.js.map
+const Sales_1 = require("../models/Sales");
+exports.getTotal = () => __awaiter(void 0, void 0, void 0, function* () {
+    const sales = yield Sales_1.getSales();
+    const count = sales.length; // total of sel
+    let total = 0;
+    sales.map((sale) => {
+        total += parseFloat(sale.amount);
+    });
+    const data = {
+        getSalesTotal: {
+            amount: total,
+            count
+        }
+    };
+    return data;
+});
+//# sourceMappingURL=SalesController.js.map
