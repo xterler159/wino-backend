@@ -18,8 +18,10 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
+    "@types/xlsx": "^0.0.36",
     "koa": "^2.11.0",
     "koa-router": "^7.4.0",
-    "pg-async": "^3.1.0"
+    "pg-async": "^3.1.0",
+    "xlsx": "^0.15.2"
   }
 }
