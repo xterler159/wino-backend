@@ -15,15 +15,9 @@ exports.generateExcelFile = () => {
     const wb = xlsx_1.utils.book_new();
     const wsData = [["Hello", "World"]];
     // creating the "workbook"
-    wb.Props = {
-        Title: "SheetJS Tutorial",
-        Subject: "Test",
-        Author: "Red Stapler",
-        CreatedDate: new Date(2017, 12, 19)
-    };
-    wb.SheetNames.push("Test Sheet");
+    wb.SheetNames.push("Sales");
     const ws = xlsx_1.utils.aoa_to_sheet(wsData);
-    wb.Sheets["Test Sheet"] = ws;
+    wb.Sheets.Sales = ws;
     xlsx_1.writeFile(wb, "dist/static/report.xlsx");
 };
 exports.getTotal = () => __awaiter(void 0, void 0, void 0, function* () {
