@@ -11,20 +11,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const xlsx_1 = require("xlsx");
 const Sales_1 = require("../models/Sales");
-exports.generateExcelFile = () => {
+exports.generateExcelFile = () => __awaiter(void 0, void 0, void 0, function* () {
+    const data = yield Sales_1.getSales();
+    const excelColumns = Object.keys(data[0]); // to get dynamically existing columns
     const wb = xlsx_1.utils.book_new();
-    const wsData = [["Hello", "World"]];
+    const wsData = [excelColumns];
     // creating the "workbook"
     wb.SheetNames.push("Sales");
     const ws = xlsx_1.utils.aoa_to_sheet(wsData);
+    xlsx_1.utils.sheet_add_json(ws, data);
     wb.Sheets.Sales = ws;
     xlsx_1.writeFile(wb, "dist/static/report.xlsx");
-};
+});
 exports.getTotal = () => __awaiter(void 0, void 0, void 0, function* () {
     const sales = yield Sales_1.getSales();
     const count = sales.length; // total of sel
     let total = 0;
-    exports.generateExcelFile();
     sales.map((sale) => {
         total += parseFloat(sale.amount);
     });
