@@ -1,10 +1,12 @@
 -- /!\ DONT COPY PASTE ALL THIS QUERIES /!\
 -- Do it one by one please.
 
+create DATABASE wino_api;
+
 create TABLE sales (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    amount DECIMAL
+    amount FLOAT(4)
 );
 
 insert into sales (name, amount)

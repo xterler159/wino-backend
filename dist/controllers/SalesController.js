@@ -24,7 +24,7 @@ exports.generateExcelFile = () => {
     wb.SheetNames.push("Test Sheet");
     const ws = xlsx_1.utils.aoa_to_sheet(wsData);
     wb.Sheets["Test Sheet"] = ws;
-    xlsx_1.writeFile(wb, "test.xlsx");
+    xlsx_1.writeFile(wb, "files/test.xlsx");
 };
 exports.getTotal = () => __awaiter(void 0, void 0, void 0, function* () {
     const sales = yield Sales_1.getSales();

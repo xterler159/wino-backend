@@ -18,7 +18,7 @@ export const generateExcelFile = () => {
     const ws = utils.aoa_to_sheet(wsData);
     wb.Sheets["Test Sheet"] = ws;
 
-    writeFile(wb, "test.xlsx");
+    writeFile(wb, "files/test.xlsx");
 };
 
 export const getTotal = async () => {
