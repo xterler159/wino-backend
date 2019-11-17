@@ -4,7 +4,7 @@
 
 Test technique réalisé pour wino. <br> <br>
 C'est un simple API RESTful qui permet de consulter des ventes `/sales` réalisé par x et qui permet aussi de consulter le montant total des ventes `/total-sales`. <br>
-Cet API permet aussi la génération d'un fichier excel avec ces ventes, sur la route `/export-sales`
+Cette API permet aussi la génération d'un fichier excel avec ces ventes, sur la route `/export-sales`
 
 Environnement technologique utilisées: 
 * NodeJs
@@ -34,7 +34,7 @@ Environnement technologique utilisées:
     VALUES ('Louise', 10), ('Maxime', 5457.51), ('Jean', 68.88);
     ```
 5. Modifier la configuration dans `src\models\Sales.ts`. Remplacez par vos identifiants. <br>
-Vous avez des données nécessaire pour faire fonctionner cet API.
+Vous avez des données nécessaire pour faire fonctionner cette API.
 
 # Étape 2
 
