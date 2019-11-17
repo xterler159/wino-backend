@@ -18,9 +18,13 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-static": "^4.0.1",
     "@types/xlsx": "^0.0.36",
     "koa": "^2.11.0",
+    "koa-logger": "^3.2.1",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "pg-async": "^3.1.0",
     "xlsx": "^0.15.2"
   }
