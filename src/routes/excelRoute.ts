@@ -5,8 +5,9 @@ import {generateExcelFile} from "../controllers/SalesController";
 const router = new Router();
 
 router.get("/export-sales", async (ctx) => {
-    await generateExcelFile();
+    const filePath = await generateExcelFile();
 
+    ctx.body = filePath;
     return ctx.status = 200;
 });
 

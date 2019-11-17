@@ -7,3 +7,6 @@ yarn-error.log
 # ides
 .idea
 .vscode
+
+# binary data
+dist/static/report.xlsx

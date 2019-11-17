@@ -16,7 +16,8 @@ const koa_router_1 = __importDefault(require("koa-router"));
 const SalesController_1 = require("../controllers/SalesController");
 const router = new koa_router_1.default();
 router.get("/export-sales", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
-    yield SalesController_1.generateExcelFile();
+    const filePath = yield SalesController_1.generateExcelFile();
+    ctx.body = filePath;
     return ctx.status = 200;
 }));
 exports.default = router.routes();

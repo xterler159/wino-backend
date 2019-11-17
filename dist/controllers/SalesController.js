@@ -22,6 +22,10 @@ exports.generateExcelFile = () => __awaiter(void 0, void 0, void 0, function* ()
     xlsx_1.utils.sheet_add_json(ws, data);
     wb.Sheets.Sales = ws;
     xlsx_1.writeFile(wb, "dist/static/report.xlsx");
+    const filePath = {
+        file: "http://localhost:3000/report.xlsx"
+    };
+    return filePath;
 });
 exports.getTotal = () => __awaiter(void 0, void 0, void 0, function* () {
     const sales = yield Sales_1.getSales();

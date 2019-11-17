@@ -19,6 +19,12 @@ export const generateExcelFile = async () => {
     wb.Sheets.Sales = ws;
 
     writeFile(wb, "dist/static/report.xlsx");
+
+    const filePath = {
+        file: "http://localhost:3000/report.xlsx"
+    };
+
+    return filePath;
 };
 
 export const getTotal = async () => {
