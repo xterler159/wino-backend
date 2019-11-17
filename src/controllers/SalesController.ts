@@ -8,17 +8,11 @@ export const generateExcelFile = () => {
     const wsData = [["Hello", "World"]];
 
     // creating the "workbook"
-    wb.Props = {
-        Title: "SheetJS Tutorial",
-        Subject: "Test",
-        Author: "Red Stapler",
-        CreatedDate: new Date(2017, 12, 19)
-    };
-    wb.SheetNames.push("Test Sheet");
+    wb.SheetNames.push("Sales");
     const ws = utils.aoa_to_sheet(wsData);
-    wb.Sheets["Test Sheet"] = ws;
+    wb.Sheets.Sales = ws;
 
-    writeFile(wb, "dist/static/test.xlsx");
+    writeFile(wb, "dist/static/report.xlsx");
 };
 
 export const getTotal = async () => {
