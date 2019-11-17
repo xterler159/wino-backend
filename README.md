@@ -39,14 +39,8 @@ Vous avez des données nécessaire pour faire fonctionner cette API.
 # Étape 2
 
 1. `npm install` <br>
-2. Copier le fichier `index.d.ts` et le placer dans node_modules/pg-async. C'est important car il y a pas encore de @types/pg-async à ce jour.<br>
+2. Copier le fichier `index.d.ts` et le placer dans node_modules/pg-async. C'est important car il y a pas encore de @types/pg-async à ce jour.
+<br>
 3. `npm start` -> http://localhost:3000
-
-
-```typescript
-declare module 'pg-async';
-```
-Le placer dans la racine du package.<br>
-En effet, il y a pas de @types/pg-async à ce jour.
 
 ## EN
