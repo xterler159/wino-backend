@@ -1,9 +1,13 @@
 # Wino backend technical test
 
-Test technique réalisé pour wino. <br>
-C'est un simple API RESTful qui permet de consulter des ventes `/sales` réalisé par x et qui permet aussi de consulter le montant total des ventes `/total-sales`
+Test technique réalisé pour wino. <br> <br>
+C'est un simple API RESTful qui permet de consulter des ventes `/sales` réalisé par x et qui permet aussi de consulter le montant total des ventes `/total-sales`. <br>
+Cet API permet aussi la génération d'un fichier excel avec ces ventes, sur la route `/export-sales`
 
-### /!\ Il faut inclure un fichier de déclaration `index.d.ts` de modules TypeScript dans le package pg-async /!\
+# First step
+
+
+#### Il faut inclure un fichier de déclaration `index.d.ts` de modules TypeScript dans le package pg-async
 
 ```typescript
 declare module 'pg-async';
