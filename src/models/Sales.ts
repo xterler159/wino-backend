@@ -1,8 +1,8 @@
 import PgAsync from "pg-async";
 
 const pgAsync = new PgAsync({
-    user: "kevin",
-    password: "153mlk.J",
+    user: "YOUR_USER_NAME",
+    password: "YOUR_PASSWORD",
     host: "localhost",
     port: 5432,
     database: "wino_api"
